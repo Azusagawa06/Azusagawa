@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a9a3f89d2e8744fb0bd43783194c34, type: 3}
+  m_Name: Gun M1911
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 0}
+  itemName: Gun M1911
+  modelPrefab: {fileID: 4501588593691146414, guid: 64fa27b0b776f564aae518ca6ecc93db, type: 3}
+  isUnarmed: 0
+  OH_Light_Attack_1: OH_Light_Attack_01
+  OH_Light_Attack_2: OH_Light_Attack_01
+  OH_Heavy_Attack_1: OH_Heavy_Attack
