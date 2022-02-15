@@ -94,6 +94,13 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
+      - time: 0.2581022
+        functionName: EnableRightFootCollider
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.28721175
         functionName: EnableCombo1
         data: 
@@ -101,7 +108,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.502337
+      - time: 0.34972677
+        functionName: DisableRightFootCollider
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.48556548
         functionName: DisableCombo1
         data: 
         objectReferenceParameter: {instanceID: 0}

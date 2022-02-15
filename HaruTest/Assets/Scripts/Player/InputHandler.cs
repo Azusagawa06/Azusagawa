@@ -104,7 +104,7 @@ namespace SG
             inputActions.PlayerActions.RB.performed += i => rb_Input = true;
             inputActions.PlayerActions.RT.performed += i => rt_Input = true;
 
-            if (Input.GetMouseButtonDown(0))
+            if (rb_Input)
             {
                 playerAttacker.CheckCombo();
 

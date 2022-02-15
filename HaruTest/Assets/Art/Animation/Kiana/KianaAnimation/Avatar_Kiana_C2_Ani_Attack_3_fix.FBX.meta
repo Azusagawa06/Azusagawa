@@ -101,8 +101,22 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.460288
+        functionName: EnableRightHandCollider
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.623157
         functionName: DisableCombo3
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.49180326
+        functionName: DisableRightHandCollider
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

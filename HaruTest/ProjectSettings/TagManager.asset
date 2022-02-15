@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - PlayerAttack
+  - PlayerHit
+  - EnemyAttack
+  - EnemyHit
   layers:
   - Default
   - TransparentFX
@@ -18,10 +22,10 @@ TagManager:
   - 
   - Controller
   - 
-  - AttckBox
-  - HitBox
-  - 
-  - 
+  - PlayerAttack
+  - PlayerHit
+  - EnemyAttack
+  - EnemyHit
   - 
   - 
   - 

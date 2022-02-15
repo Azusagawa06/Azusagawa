@@ -55,7 +55,7 @@ namespace SG
             animatorHandler.Initialize();
 
             isGrounded = true;
-            ignoreForGroundCheck = ~(1 << 8 | 1 << 11);
+            ignoreForGroundCheck = ~(1 << 8 | 1 << 11 | 1 << 12 | 1 << 13 | 1 << 14 | 1 << 15);
         }
 
 
@@ -90,9 +90,9 @@ namespace SG
             if (inputHandler.rollFlag)
                 return;
 
-            //if (playerManager.isInteracting)
-            //    return;
-            
+            if (playerManager.isInteracting)
+                return;
+
             moveDirection = cameraObject.forward * inputHandler.vertical;
             moveDirection += cameraObject.right * inputHandler.horizontal;
             moveDirection.Normalize();
@@ -133,7 +133,7 @@ namespace SG
 
         public void HandleRollingAndSprinting(float delta)
         {
-            if (animatorHandler.anim.GetBool("isInteracting"))
+            if (playerManager.isInteracting)
                 return;
 
             if (inputHandler.rollFlag)
@@ -260,8 +260,6 @@ namespace SG
                 myTransform.position = targetPosition;
             }
         }
-
-
         #endregion
     }
 }

@@ -9,8 +9,8 @@ namespace SG
         WeaponHolderSlot leftHandSlot;
         WeaponHolderSlot rightHandSlot;
 
-        DamageCollider leftHandDamageCollider;
-        DamageCollider rightHandDamageCollider;
+        PlayerDamageCollider leftHandDamageCollider;
+        PlayerDamageCollider rightHandDamageCollider;
 
         private void Awake()
         {

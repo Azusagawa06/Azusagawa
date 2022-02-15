@@ -85,16 +85,52 @@ namespace SG
             {
                 foreach (var item in dic)
                 {
-                    if (anim.GetBool(item.Value.canCombo))
+                    if (state.IsName("AT1"))
                     {
-                        animatorHandler.anim.SetBool((item.Value.canCombo), false);
+                        if (state.normalizedTime > 0.3)
+                        {
+                            if (anim.GetBool(item.Value.canCombo))
+                            {
+                                animatorHandler.anim.SetBool((item.Value.canCombo), false);
+                            }
+
+                            if (state.IsName(item.Key))
+                            {
+                                count = item.Value.id + 1;
+                                //Debug.Log(count);
+                            }
+                        }
+                    }
+                    else if (state.IsName("AT4"))
+                    {
+                        if (state.normalizedTime > 0.6)
+                        {
+                            if (anim.GetBool(item.Value.canCombo))
+                            {
+                                animatorHandler.anim.SetBool((item.Value.canCombo), false);
+                            }
+
+                            if (state.IsName(item.Key))
+                            {
+                                count = item.Value.id + 1;
+                                //Debug.Log(count);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (anim.GetBool(item.Value.canCombo))
+                        {
+                            animatorHandler.anim.SetBool((item.Value.canCombo), false);
+                        }
+
+                        if (state.IsName(item.Key))
+                        {
+                            count = item.Value.id + 1;
+                            //Debug.Log(count);
+                        }
                     }
 
-                    if (state.IsName(item.Key))
-                    {
-                        count = item.Value.id + 1;
-                        //Debug.Log(count);
-                    }
                 }
             }
         }
