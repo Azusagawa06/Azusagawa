@@ -15,6 +15,7 @@ namespace SG
         public bool b_Input;
         public bool rb_Input;
         public bool rt_Input;
+        public bool jump_Input;
 
 
         public bool rollFlag;
@@ -59,6 +60,7 @@ namespace SG
             MoveInput(delta);
             HandleRollInput(delta);
             HandleAttackInput(delta);
+            HandleJumpInput(delta);
         }
 
         public void CameraInput(float delta)
@@ -154,6 +156,11 @@ namespace SG
             //}
             #endregion
 
+        }
+
+        private void HandleJumpInput(float delta)
+        {
+            inputActions.PlayerActions.Jump.performed += i => jump_Input = true;
         }
     }
 }

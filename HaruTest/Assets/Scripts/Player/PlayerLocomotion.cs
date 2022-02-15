@@ -187,10 +187,7 @@ namespace SG
 
             if (playerManager.isInAir)
             {
-                //Vector3 move = Vector3.zero;
-                //move.y -= fallingSpeed * Time.deltaTime;
                 rigidbody.AddForce(-Vector3.up * fallingSpeed);
-                //characterController.Move(move * Time.deltaTime);
                 rigidbody.AddForce(moveDirection * fallingSpeed / 5f);
             }
 
@@ -260,6 +257,26 @@ namespace SG
                 myTransform.position = targetPosition;
             }
         }
+
+        public void HandleJumping()
+        {
+            if (playerManager.isInteracting)
+                return;
+
+            if (inputHandler.jump_Input)
+            {
+                if (inputHandler.moveAmount > 0)
+                {
+                    moveDirection = cameraObject.forward * inputHandler.vertical;
+                    moveDirection += cameraObject.right * inputHandler.horizontal;
+                    animatorHandler.PlayTargetAnimation("Jump", true);
+                    moveDirection.y = 0;
+                    Quaternion jumpRotation = Quaternion.LookRotation(moveDirection);
+                    myTransform.rotation = jumpRotation;
+                }
+            }
+        }
+
         #endregion
     }
 }

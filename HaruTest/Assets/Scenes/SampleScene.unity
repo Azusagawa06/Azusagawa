@@ -5099,6 +5099,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377213392846767550, guid: b1c0c48f46f74134c975df5a1265df52, type: 3}
+      propertyPath: canRotate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1551506864173306490, guid: b1c0c48f46f74134c975df5a1265df52, type: 3}
       propertyPath: m_Name
       value: Player
