@@ -16,6 +16,8 @@ namespace SG
         [Header("Player Flags")]
         public bool isSprinting;
         public bool isInAir;
+        public bool isJumping;
+        public bool isLandAfterJump;
 
         //需要在该脚本中加入地面检测，不然会在空中做动作（后面还会检测是否Dead，不然死后还会做动作）
         public bool isGrounded;
@@ -33,6 +35,8 @@ namespace SG
         {
             float delta = Time.deltaTime;
             isInteracting = anim.GetBool("isInteracting");
+            isJumping = anim.GetBool("isJumping");
+            isLandAfterJump = anim.GetBool("isLandAfterJump");
             anim.SetBool("isInAir", isInAir);
 
             inputHandler.CameraInput(delta);
